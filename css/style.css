@@ -7,46 +7,57 @@ body, html {
     min-height: 100%;
     overflow: hidden;
     position: relative;
+    max-width: 920px;
+    margin: 0 auto;
 }
-
-
-/*------------------------------------*
-                CLEARFIX
-*------------------------------------*/
-.clearfix::before,
-.clearfix::after {
-    content: '';
-    display: table;
+img {
+    display: block;
+    max-width: 100%;
 }
-.clearfix::after {
-    clear: both;
+section {
+    margin: 30px 0;
 }
 /*------------------------------------*
-            END CLEARFIX
+::LOGO TEXT
 *------------------------------------*/
-
-/*------------------------------------*
-::Скрытие для СЕО
-*------------------------------------*/
-.logo-text {
+.logo__text {
     position: absolute;
     top: 0;
     left: -9999px;
-    /* text-indent: -9999px;  */
 }
 /*------------------------------------*
-            END Скрытие для СЕО
+::END LOGO TEXT
+*------------------------------------*/
+
+
+/*------------------------------------*
+::CLEARFIX
+*------------------------------------*/
+.clearfix-img__box, .clearfix-text {
+    float: left;
+}
+.clearfix-img__box {
+    width: 30%;
+}
+.clearfix-text {
+    width: 70%;
+}
+/*------------------------------------*
+::END CLEARFIX
 *------------------------------------*/
 
 /*------------------------------------*
-::Вертикальное центрирование
+::VERTICAL ALIGN
 *------------------------------------*/
-.vertical {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+.vertical-align__box {
+    background: red;
+    position: relative;
+    height: 150px;
 }
+.vertical-align__inner {
+    width: 50px;
+}
+
 /*------------------------------------*
-            END Вертикальное центрирование
+::END VERTICAL ALIGN
 *------------------------------------*/
