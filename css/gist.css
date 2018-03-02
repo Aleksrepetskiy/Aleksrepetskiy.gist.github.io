@@ -1,14 +1,16 @@
 /*------------------------------------*
                 CLEARFIX
 *------------------------------------*/
-.clearfix::before,
-.clearfix::after {
+
+.clearfix::before, .clearfix::after {
     content: '';
     display: table;
 }
+
 .clearfix::after {
     clear: both;
 }
+
 /*------------------------------------*
             END CLEARFIX
 *------------------------------------*/
@@ -16,25 +18,212 @@
 /*------------------------------------*
 ::Скрытие для СЕО
 *------------------------------------*/
+
 .logo-text {
     position: absolute;
     top: 0;
     left: -9999px;
     /* text-indent: -9999px;  */
 }
+
 /*------------------------------------*
             END Скрытие для СЕО
 *------------------------------------*/
 
 /*------------------------------------*
-::Вертикальное центрирование
+		Вертикальное центрирование
 *------------------------------------*/
+
 .vertical {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
 }
+
 /*------------------------------------*
-            END Вертикальное центрирование
+    END Вертикальное центрирование
 *------------------------------------*/
+
+/*------------------------------------*
+                 FORM
+*------------------------------------*/
+
+.form {
+    width: 100%;
+}
+
+.form__row {
+    position: relative;
+}
+
+.form__row+.form__row {
+    margin-top: 15px;
+}
+
+::-webkit-input-placeholder {
+    color: #7b7b83;
+}
+
+::-moz-placeholder {
+    color: #7b7b83;
+}
+
+:-moz-placeholder {
+    color: #7b7b83;
+}
+
+:-ms-input-placeholder {
+    color: #7b7b83;
+}
+
+.form__label {
+    display: block;
+    color: #7b7b83;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.b-input, .b-select, .b-textarea {
+    position: relative;
+    width: 100%;
+}
+.b-checkbox {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.b-radio {
+    display: inline-block;
+    position: relative;
+}
+
+.b-input input, .b-textarea textarea {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 16px;
+    padding: 10px 28px;
+    line-height: 1.15;
+}
+
+.b-input input {}
+
+.b-textarea textarea {
+    min-height: 150px;
+    resize: none;
+}
+.b-radio+.b-radio {
+    margin-left: 40px;
+}
+.b-radio input {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+.radio__label {
+    display: block;
+    color: #7b7b83;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 40px;
+    cursor: pointer;
+}
+.radio__label::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #cfcfcf;
+    border-radius: 50%;
+    background: #fff;
+    box-sizing: border-box;
+    transition: .2s;
+}
+.radio__label::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #8dc63f;
+    transition: .2s;
+    opacity: 0;
+}
+.b-radio input:checked+.radio__label::after {
+    opacity: 1;
+}
+.b-checkbox input {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+.checkbox__label {
+    display: block;
+    padding-left: 40px;
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 26px;
+}
+.checkbox__label::before {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #cfcfcf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    background: #eeeef4;
+    box-sizing: border-box;
+    text-align: center;
+    transition: .2s;
+}
+.b-checkbox input:checked+.checkbox__label::before {
+    content: url(../images/icons/tick.svg);
+    transition: .2s;
+}
+.form__error {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: rgba(37, 37, 37, 0.95);
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 13px;
+    color: #fff;
+    padding: 6px 12px;
+    z-index: 1;
+}
+
+.form__error::before {
+    bottom: 100%;
+    left: 19px;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border: solid transparent;
+    border-bottom-color: rgba(37, 37, 37, 0.95);
+    border-width: 4px;
+}
+
+input.error, textarea.error {
+    border: 1px solid #db3a88;
+    background: #fff3f5;
+}
+
+.error+.form__error {
+    display: block;
+}
