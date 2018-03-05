@@ -69,3 +69,44 @@ section {
     max-width: 430px;
     margin: 0 auto;
 }
+
+/*------------------------------------*
+::SELECT
+*------------------------------------*/
+
+.b-select--calc .select2-container--default .select2-selection--single {
+    height: 46px;
+    border-radius: 0 23px 23px 0;
+    padding-left: 12px;
+    padding-right: 30px;
+    background-image: linear-gradient(to top, #dedee0 0%, #eeeef4 99%, #eeeef4 100%);
+    border: 1px solid #cfcfcf;
+}
+.b-select--calc .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 44px;
+    padding: 0;
+    font-size: 16px;
+}
+.b-select--calc .select2-selection--single .select2-selection__arrow {
+    height: 44px;
+    right: 5px;
+}
+.select2-dropdown {
+    background-color: #eeeef4;
+    border: 1px solid #d3d3dc;
+}
+.select2-results__option {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 12px;
+    height: 46px;
+    line-height: 46px;
+}
+.select2-results__option+.select2-results__option {
+    border-top: 1px solid #d3d3dc;
+}
+.select2-container {
+    width: 97px!important;
+}

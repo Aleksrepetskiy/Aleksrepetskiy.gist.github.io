@@ -11,6 +11,7 @@
 	<meta name="author" content="">
 	<!--CSS-->
 	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/select2.css" rel="stylesheet">
 	<link href="css/gist.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
@@ -49,9 +50,24 @@
 				<div class="form">
 					<form action="">
 						<div class="form__row">
+							<div class="b-select b-select--calc">
+								<select class="select-calc">
+									<option></option>
+									<option>XBT</option>
+									<option>BCH</option>
+									<option>ETC</option>
+									<option>LTC</option>
+									<option>REP</option>
+									<option>XMR</option>
+									<option>XRP</option>
+									<option>ZEC</option>
+								</select>
+							</div>
+						</div>
+						<div class="form__row">
 							<label for="" class="form__label">input</label>
 							<div class="b-input">
-								<input type="text" name="" value="" placeholder="input">
+								<input type="text" name="" value="" placeholder="input" class="error">
 								<div class="form__error">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quisquam placeat, obcaecati distinctio voluptatum, enim.</div>
 							</div>
 						</div>
@@ -95,7 +111,7 @@
 	</footer>
 	<!--JS-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/js/jquery-3.2.1.js"><\/script>')</script>
+	<script src="js/select2.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
